@@ -33,7 +33,7 @@ export default {
     }
   },
   created() {
-    if (!this.value) {
+    if (this.options.defaultDatetime && !this.value) {
       this.$emit("input", format(new Date(), "yyyy-MM-dd HH:mm:ss"));
     }
   }
